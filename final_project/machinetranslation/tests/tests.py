@@ -6,14 +6,14 @@ class TestEnglishToFrenchTranslation(unittest.TestCase):
     def test_english_to_french_translation(self):
         english_text = "Hello"
         english_to_french_translation = english_to_french(english_text)
-        self.assertEqual("", "") 
+        self.assertEqual(english_to_french(""), "") 
         self.assertEqual(english_to_french_translation, "Bonjour")
 
 class TestFrenchToEnglishTranslation(unittest.TestCase):
     def test_french_to_english_translation(self):
         french_text = "Bonjour"
         french_to_english_translation = french_to_english(french_text)
-        self.assertEqual("", "") 
+        self.assertEqual(french_to_english(""), "") 
         self.assertEqual(french_to_english_translation, "Hello")
 
 if __name__ == '__main__':
