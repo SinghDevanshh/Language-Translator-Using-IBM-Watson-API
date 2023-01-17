@@ -3,18 +3,17 @@ from translator import english_to_french, french_to_english
 
 
 class TestEnglishToFrenchTranslation(unittest.TestCase):
-    def test_english_to_french_translation(self):
-        english_text = "Hello"
-        english_to_french_translation = english_to_french(english_text)
-        self.assertEqual(english_to_french(""), "") 
-        self.assertEqual(english_to_french_translation, "Bonjour")
+    def test1(self):
+
+        self.assertIsNone(english_to_french(None))
+        self.assertEqual(english_to_french("Hello"), "Bonjour")
+        self.assertNotEqual(english_to_french("Bonjour"),"Hello")
 
 class TestFrenchToEnglishTranslation(unittest.TestCase):
     def test_french_to_english_translation(self):
-        french_text = "Bonjour"
-        french_to_english_translation = french_to_english(french_text)
-        self.assertEqual(french_to_english(""), "") 
-        self.assertEqual(french_to_english_translation, "Hello")
 
-if __name__ == '__main__':
-    unittest.main()
+        self.assertIsNone(english_to_french(None))
+        self.assertEqual(french_to_english("Bonjour"), "Hello")
+        self.assertNotEqual(french_to_english("Hello"),"Bonjour")
+
+unittest.main()
